@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    .timeline
+        form#join-form(action='/decide/profile' method='post')
+            .input-group
+                label(for='join-nick') 닉네임
+                input#join-nick(type='text' name='nick')
+            button#join-btn.btn(type='submit') 프로필 정보 변경
