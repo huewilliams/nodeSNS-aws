@@ -1,5 +1,4 @@
-// 로컬 로그인을 처리하는 파일
-const local = require('./localStrategy');
+
 // 카카오 로그인을 처리하는 파일
 const kakao = require('./kakaoStrategy');
 // 사용자의 정보를 활용하기 위해 User 모델을 불러옴
@@ -32,7 +31,5 @@ module.exports = (passport) => {
             .catch(err => done(err));
             // 첫 번째 매개변수로 에러를 전달함
     });
-
-    local(passport);
     kakao(passport);
 };
